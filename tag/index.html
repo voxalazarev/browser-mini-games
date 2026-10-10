@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tag!</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="game" width="960" height="540"></canvas>
+
+    <div id="hud" class="hidden">
+      <div id="hudTimer">0:00</div>
+      <div id="hudRoles"></div>
+      <button id="btnNewCity">New Round</button>
+      <button id="btnMenu">Menu</button>
+    </div>
+
+    <div id="menu" class="screen">
+      <div class="panel">
+        <h1>TAG</h1>
+        <p>Classic 2D platformer tag! Whoever is <b>IT</b> chases the other player - touch to pass it on. Spend the least time as IT in 60 seconds to win.</p>
+        <div id="modePick">
+          <button id="btn2P" class="modeBtn">2 Players</button>
+          <button id="btnBot" class="modeBtn">vs Bot</button>
+        </div>
+        <button id="btnPlay">Play</button>
+        <div class="controls">
+          <b class="p1c">Player 1:</b> A/D to move, W to jump<br>
+          <b class="p2c">Player 2:</b> ←/→ to move, ↑ to jump
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

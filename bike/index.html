@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Trail Riders</title>
+<link rel="stylesheet" href="style.css?v=11">
+</head>
+<body>
+  <div id="app">
+    <canvas id="game" width="960" height="540"></canvas>
+
+    <div id="menu" class="screen">
+      <div class="panel">
+        <h1>TRAIL RIDERS</h1>
+        <p id="sub"></p>
+        <div id="levelGrid"></div>
+        <div class="controls">
+          <div><b class="p1">Player 1</b> &nbsp; <b>W / S</b> heavier &nbsp; <b>A / D</b> flip left / right &nbsp; tricks <b>Z X C V</b></div>
+          <div><b class="p2">Player 2</b> &nbsp; <b>&uarr; / &darr;</b> heavier &nbsp; <b>&larr; / &rarr;</b> flip left / right &nbsp; tricks <b>/ . , M</b></div>
+          <div class="small">Both riders race the same track (P1 on top, P2 on the bottom). You're light by default - every level is mountains with GAPS between them: launch off a ramp and either drop down to a lower mountain or climb UP to a higher one - flip to match the ground and land! Hold heavier on slopes for speed, but let go before a ramp or you'll roll back and stop. Land a trick for a speed boost (longer air time = bigger boost). Crash and you restart with NEW tricks. All 100 levels are unlocked. Esc = menu.</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="result" class="screen hidden">
+      <div class="panel small-panel">
+        <h1 id="resTitle"></h1>
+        <p id="resBody"></p>
+        <button id="nextBtn">Next Level</button>
+        <button id="replayBtn">Replay</button>
+        <button id="menuBtn">Menu</button>
+      </div>
+    </div>
+  </div>
+  <script src="core.js?v=11"></script>
+  <script src="game.js?v=11"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ping Pong</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="game" width="960" height="540"></canvas>
+
+    <div id="menu" class="screen">
+      <div class="panel">
+        <h1>PING PONG</h1>
+        <p>First to 11 points wins - but you must win by 2!</p>
+        <div class="controls">
+          <div><b class="p1">Player 1</b> &nbsp; W / S to move your paddle up and down</div>
+          <div><b class="p2">Player 2</b> &nbsp; &uarr; / &darr; to move your paddle up and down</div>
+          <div class="small">Real table-tennis rules: let the ball bounce once on your side before you return it - hit it before the bounce, or let it bounce twice, and it's a fault. Esc = menu.</div>
+        </div>
+        <button id="startBtn">Play</button>
+      </div>
+    </div>
+
+    <div id="over" class="screen hidden">
+      <div class="panel">
+        <h1 id="overTitle"></h1>
+        <p id="overScore"></p>
+        <button id="rematchBtn">Rematch</button>
+        <button id="menuBtn">Menu</button>
+      </div>
+    </div>
+  </div>
+  <script src="game.js?v=3"></script>
+</body>
+</html>

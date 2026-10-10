@@ -1,0 +1,56 @@
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: #0b0b12;
+  color: #eee;
+  font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+#app {
+  position: relative;
+  width: 960px; height: 540px;
+  margin: 20px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 0 2px #333, 0 10px 40px rgba(0,0,0,0.6);
+}
+canvas { display: block; background: #1b1b2b; }
+.hidden { display: none !important; }
+
+#hud {
+  position: absolute; top: 0; left: 0; right: 0;
+  display: flex; align-items: center; gap: 16px;
+  padding: 8px 14px;
+  background: rgba(0,0,0,0.4);
+  font-weight: bold;
+}
+#hudTimer { font-size: 22px; min-width: 50px; }
+#hudRoles { flex: 1; font-size: 14px; }
+#hud button { margin: 0; margin-left: auto; padding: 5px 12px; font-size: 13px; }
+
+.screen {
+  position: absolute; inset: 0;
+  background: rgba(5,5,10,0.88);
+  display: flex; align-items: center; justify-content: center;
+}
+.panel {
+  background: #1a1a28; border: 1px solid #333; border-radius: 10px;
+  padding: 22px 30px; max-width: 540px; text-align: center;
+}
+.panel h1 { margin: 0 0 8px; letter-spacing: 2px; }
+.panel p { line-height: 1.5; font-size: 14px; opacity: 0.9; }
+
+#modePick { margin: 10px 0 4px; }
+.modeBtn { background: #2a2a40; }
+.modeBtn.selected { background: #4a6cf7; outline: 2px solid #fff; }
+
+button {
+  background: #4a6cf7; color: #fff; border: none;
+  padding: 9px 22px; border-radius: 6px; font-size: 14px; cursor: pointer; margin: 5px 4px;
+}
+button:hover { filter: brightness(1.15); }
+
+.controls { margin-top: 14px; font-size: 13px; line-height: 1.8; text-align: left; display: inline-block; }
+.p1c { color: #4ad0ff; }
+.p2c { color: #ff5b7a; }

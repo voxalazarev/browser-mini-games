@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Weapon Brawl</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="game" width="960" height="540"></canvas>
+
+    <div id="menu" class="screen">
+      <div class="panel">
+        <h1>WEAPON BRAWL</h1>
+        <p id="sub"></p>
+        <div id="mapPick">
+          <button id="mapPrev">&#9664;</button>
+          <input id="mapNum" type="number" min="1" placeholder="#">
+          <span id="mapOf"></span>
+          <button id="mapNext">&#9654;</button>
+          <button id="mapRandom">Random</button>
+        </div>
+        <div id="mapName"></div>
+        <canvas id="preview" width="288" height="162"></canvas>
+        <button id="startBtn">Fight!</button>
+        <div class="controls">
+          <div><b class="p1">Player 1</b> &nbsp; A / D move &nbsp; W jump (3rd jump = launch) &nbsp; V attack &nbsp; B dash</div>
+          <div><b class="p2">Player 2</b> &nbsp; &larr; / &rarr; move &nbsp; &uarr; jump (3rd jump = launch) &nbsp; / attack &nbsp; &darr; dash</div>
+          <div class="small">Grab crates for a random weapon. First to 3 round wins takes the match. Esc = back to menu.</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="end" class="screen hidden">
+      <div class="panel">
+        <h1 id="endTitle"></h1>
+        <button id="rematchBtn">Rematch</button>
+        <button id="menuBtn">Menu</button>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

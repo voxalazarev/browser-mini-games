@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Browser Mini Games</title>
+<style>
+  :root { --bg:#0b0b12; --card:#171726; --line:#2b2b44; --text:#eee; --muted:#9a9ab8; --accent:#4ad0ff; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,"Segoe UI",Arial,sans-serif; }
+  main { max-width:960px; margin:0 auto; padding:40px 16px 60px; }
+  h1 { margin:0 0 6px; font-size:32px; }
+  .sub { color:var(--muted); margin:0 0 28px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:14px; }
+  a.card { display:block; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px; color:inherit; text-decoration:none; transition:transform .12s,border-color .12s; }
+  a.card:hover { transform:translateY(-3px); border-color:var(--accent); }
+  .card h2 { margin:0 0 6px; font-size:18px; }
+  .card p { margin:0; color:var(--muted); font-size:14px; line-height:1.4; }
+  .tag { display:inline-block; margin-top:10px; font-size:12px; color:var(--accent); }
+  footer { margin-top:36px; color:var(--muted); font-size:13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Browser Mini Games</h1>
+  <p class="sub">Local two-player games - same keyboard, no install. Click a game to play.</p>
+  <div class="grid">
+    <a class="card" href="tag/"><h2>Tag 2D</h2><p>Side-view platformer tag. Chase or run across platforms, 2 players or vs a smart bot.</p><span class="tag">2 players / bot</span></a>
+    <a class="card" href="tag_3d_backup/"><h2>Tag 3D - Spider Rooftops</h2><p>Split-screen 3D tag on skyscrapers. Web-swing, shoot webs, dodge, and climb walls.</p><span class="tag">2 players / bot</span></a>
+    <a class="card" href="obby/"><h2>Obby</h2><p>Obstacle-course platformer.</p><span class="tag">Platformer</span></a>
+    <a class="card" href="obby2/"><h2>Obby Duo</h2><p>Two-player obstacle course.</p><span class="tag">2 players</span></a>
+    <a class="card" href="fighter/"><h2>Weapon Brawl</h2><p>Arena fighting with weapons.</p><span class="tag">2 players</span></a>
+    <a class="card" href="bike/"><h2>Trail Riders</h2><p>Bike trail racing.</p><span class="tag">Racing</span></a>
+    <a class="card" href="motox/"><h2>Moto Rush</h2><p>Motocross rush.</p><span class="tag">Racing</span></a>
+    <a class="card" href="tennis/"><h2>Jump Tennis</h2><p>Tennis with jumping.</p><span class="tag">2 players</span></a>
+    <a class="card" href="pingpong/"><h2>Ping Pong</h2><p>Classic table tennis.</p><span class="tag">2 players</span></a>
+    <a class="card" href="golf/"><h2>Drag Golf</h2><p>Drag to aim and shoot.</p><span class="tag">Sports</span></a>
+    <a class="card" href="catch/"><h2>Arrow Catch</h2><p>Catch the arrows.</p><span class="tag">Arcade</span></a>
+  </div>
+  <footer>Also in the repo: Python games (see README) that run locally.</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Drag Golf</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="game" width="960" height="540"></canvas>
+
+    <div id="hud">
+      <span id="hudLevel">Level 1</span>
+      <span id="hudTurn"></span>
+      <button id="btnMenu">Menu</button>
+    </div>
+
+    <div id="overlay" class="screen">
+      <div class="panel">
+        <h1>DRAG GOLF</h1>
+        <p>Two players, one hole at a time - 150 holes, each harder than the last. Beat a hole to unlock the next.</p>
+        <p><b>How to shoot:</b> press and hold the mouse, drag away from the ball, then let go. The arrow shows the direction the ball will fly - the <b>opposite</b> way from your drag. Drag farther for more power.</p>
+        <p>Players alternate shots. If your shot doesn't sink the ball, it's the other player's turn - from wherever their ball is sitting. First to sink it wins the hole.</p>
+        <button id="btnPlay">Play</button>
+        <button id="btnLevels">Level Select</button>
+      </div>
+    </div>
+
+    <div id="levelSelect" class="screen hidden">
+      <div class="panel wide">
+        <h1>Select Hole</h1>
+        <div id="levelGrid"></div>
+        <button id="btnBackFromSelect">Back</button>
+      </div>
+    </div>
+
+    <div id="winScreen" class="screen hidden">
+      <div class="panel">
+        <h1 id="winTitle">HOLE!</h1>
+        <p id="winBody"></p>
+        <button id="btnNextLevel">Next Hole</button>
+        <button id="btnWinMenu">Level Select</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

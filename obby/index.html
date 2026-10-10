@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Obby</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="game" width="960" height="540"></canvas>
+
+    <div id="hud">
+      <span id="hudLevel">Level 1</span>
+      <span id="hudHint">Move: WASD or Arrow Keys (jump = W / Up)</span>
+      <button id="btnMenu">Menu</button>
+    </div>
+
+    <div id="overlay" class="screen">
+      <div class="panel">
+        <h1>OBBY</h1>
+        <p>Make your way through the obstacle course. Touch a spike, or fall off, and you restart the level.</p>
+        <p><b>Controls:</b> A/D or Left/Right arrows to move, W or Up to jump</p>
+        <button id="btnPlay">Play</button>
+        <button id="btnLevels">Level Select</button>
+      </div>
+    </div>
+
+    <div id="levelSelect" class="screen hidden">
+      <div class="panel wide">
+        <h1>Select Level</h1>
+        <div id="levelGrid"></div>
+        <button id="btnBackFromSelect">Back</button>
+      </div>
+    </div>
+
+    <div id="deathScreen" class="screen hidden">
+      <div class="panel">
+        <h1>YOU DIED</h1>
+        <p id="deathReason"></p>
+      </div>
+    </div>
+
+    <div id="winScreen" class="screen hidden">
+      <div class="panel">
+        <h1>LEVEL COMPLETE!</h1>
+        <button id="btnNextLevel">Next Level</button>
+        <button id="btnWinMenu">Level Select</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

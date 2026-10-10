@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Moto Rush</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="game" width="960" height="540"></canvas>
+
+    <div id="hud" class="hidden">
+      <div id="hudTop">
+        <div id="hudSpeed">0 <span>km/h</span></div>
+        <div id="hudTimer">0.0s</div>
+        <div id="hudProgressWrap"><div id="hudProgressBar"></div></div>
+        <button id="btnPause">II</button>
+        <button id="btnRestart">&#x21bb;</button>
+      </div>
+      <div id="flipPopup"></div>
+    </div>
+
+    <div id="touchControls" class="hidden">
+      <div class="touchSide left">
+        <button id="tLeft" class="touchBtn">&#8630;</button>
+        <button id="tRight" class="touchBtn">&#8631;</button>
+      </div>
+      <div class="touchSide right">
+        <button id="tBrake" class="touchBtn">&#9664;&#9664;</button>
+        <button id="tGas" class="touchBtn">&#9654;&#9654;</button>
+      </div>
+    </div>
+
+    <div id="menu" class="screen">
+      <div class="panel">
+        <h1>MOTO RUSH<span class="wheelie">&#127954;</span></h1>
+        <p class="tag">5 worlds &middot; 30 tracks &middot; real two-wheel physics</p>
+        <div id="modePick">
+          <button id="btn1P" class="modeBtn">1 Player</button>
+          <button id="btn2P" class="modeBtn">2 Players</button>
+        </div>
+        <button id="btnPlay">Play</button>
+        <button id="btnLevels">Levels</button>
+        <button id="btnGarage">Garage</button>
+        <button id="btnMute">Sound: On</button>
+        <div class="controls">
+          <b class="p1c">Player 1:</b> W gas &middot; S brake &middot; A/D lean &middot; Space restart<br>
+          <b class="p2c">Player 2 (2-player mode):</b> &uarr; gas &middot; &darr; brake &middot; &larr;/&rarr; lean<br>
+          <span class="small">Lean in the air to flip and rotate for a landing. Hold gas on the ground and lean back to wheelie. Racing to the finish - first across wins.</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="levelSelect" class="screen hidden">
+      <div class="panel wide">
+        <h1>Select Track</h1>
+        <div id="worldTabs"></div>
+        <div id="levelGrid"></div>
+        <button id="btnBackFromSelect">Back</button>
+      </div>
+    </div>
+
+    <div id="garage" class="screen hidden">
+      <div class="panel wide">
+        <h1>Garage</h1>
+        <div id="coinCount">Coins: 0</div>
+        <div id="bikeList"></div>
+        <div class="controls small">Colors:</div>
+        <div id="colorPicks"></div>
+        <button id="btnBackFromGarage">Back</button>
+      </div>
+    </div>
+
+    <div id="pauseScreen" class="screen hidden">
+      <div class="panel">
+        <h1>PAUSED</h1>
+        <button id="btnResume">Resume</button>
+        <button id="btnPauseRestart">Restart</button>
+        <button id="btnPauseMenu">Menu</button>
+      </div>
+    </div>
+
+    <div id="crashScreen" class="screen hidden">
+      <div class="panel">
+        <h1>CRASHED!</h1>
+        <p id="crashReason"></p>
+      </div>
+    </div>
+
+    <div id="winScreen" class="screen hidden">
+      <div class="panel">
+        <h1>TRACK COMPLETE</h1>
+        <div id="winStars"></div>
+        <p id="winStats"></p>
+        <button id="btnNextLevel">Next Track</button>
+        <button id="btnRetryWin">Retry</button>
+        <button id="btnWinMenu">Levels</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Rooftop Parkour!</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="game" width="960" height="540"></canvas>
+
+    <div id="hud" class="hidden">
+      <div id="hudTimer">0:00</div>
+      <div id="hudRoles"></div>
+      <button id="btnNewCity">New City</button>
+      <button id="btnMenu">Menu</button>
+    </div>
+
+    <div id="menu" class="screen">
+      <div class="panel">
+        <h1>ROOFTOP PARKOUR</h1>
+        <p>First-person-style split-screen city parkour! Run, jump, <b>mantle</b> and <b>stick to walls</b> (jump into a wall, then W/S climb and A/D move sideways, jump to leap off) up onto rooftops. Shoot a web at the other player: if they do not dodge it (swing key) in time, they become the tagger. Web has a 5s cooldown.</p>
+        <div id="modePick">
+          <button id="btn2P" class="modeBtn">2 Players</button>
+          <button id="btnBot" class="modeBtn">vs Bot</button>
+        </div>
+        <button id="btnPlay">Play</button>
+        <div class="controls">
+          <b class="p1c">Player 1 (top view):</b> A/D turn, W forward, S back, Space to jump/mantle, <b>E</b> web-swing (also dodges a web), <b>Q</b> shoot web<br>
+          <b class="p2c">Player 2 (bottom view):</b> ←/→ turn, ↑ forward, ↓ back, / to jump/mantle, <b>.</b> web-swing (also dodges a web), <b>,</b> shoot web
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Jump Tennis</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="game" width="960" height="540"></canvas>
+
+    <div id="menu" class="screen">
+      <div class="panel">
+        <h1>JUMP TENNIS</h1>
+        <p>First to 10 points wins. The ball may bounce once - if it touches the floor a second time (before someone hits it), the other player scores!</p>
+        <div class="controls">
+          <div><b class="p1">Player 1</b> &nbsp; A / D move &nbsp; W jump (press again in the air to jump again!) &nbsp; S dive down &nbsp; Space = your ability</div>
+          <div><b class="p2">Player 2</b> &nbsp; &larr; / &rarr; move &nbsp; &uarr; jump (press again in the air to jump again!) &nbsp; &darr; dive down &nbsp; / = your ability</div>
+          <div class="small">Every point you both get a NEW random ability (50 different ones, one is super rare!). Every point you both get a NEW random ability (50 different ones, one is super rare!). Touch the ball with your racket to send it to the other side. Esc = menu.</div>
+        </div>
+        <button id="startBtn">Play</button>
+      </div>
+    </div>
+
+    <div id="over" class="screen hidden">
+      <div class="panel">
+        <h1 id="overTitle"></h1>
+        <p id="overScore"></p>
+        <button id="rematchBtn">Rematch</button>
+        <button id="menuBtn">Menu</button>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

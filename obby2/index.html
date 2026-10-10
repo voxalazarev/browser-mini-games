@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Obby Duo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="game" width="960" height="540"></canvas>
+
+    <div id="hud">
+      <span id="hudLevel">Level 1</span>
+      <span id="hudHint"></span>
+      <button id="btnMenu">Menu</button>
+    </div>
+
+    <div id="overlay" class="screen">
+      <div class="panel">
+        <h1>OBBY DUO</h1>
+        <p>One obstacle course, played solo or together - reach the goal (both of you, in 2-player) to clear it. Touch a spike, get hit by a patrolling spike, fall off, or wait too long on a crumbling platform, and you restart the level. 150 levels, each harder than the last - beat one to unlock the next.</p>
+        <p><b>Player 1:</b> Arrow keys to move and jump &nbsp;&nbsp; <b>Player 2 (2-player mode):</b> WASD to move and jump</p>
+        <p>Hold the jump key longer to jump higher, up to a limit. Orange platforms launch you into the air. Platforms that turn red are about to crumble away.</p>
+        <div class="modePick">
+          <button id="btn1P" class="modeBtn">1 Player</button>
+          <button id="btn2P" class="modeBtn">2 Players</button>
+        </div>
+        <button id="btnPlay">Play</button>
+        <button id="btnLevels">Level Select</button>
+      </div>
+    </div>
+
+    <div id="levelSelect" class="screen hidden">
+      <div class="panel wide">
+        <h1>Select Level</h1>
+        <div id="levelGrid"></div>
+        <button id="btnBackFromSelect">Back</button>
+      </div>
+    </div>
+
+    <div id="deathScreen" class="screen hidden">
+      <div class="panel">
+        <h1>YOU DIED</h1>
+        <p id="deathReason"></p>
+      </div>
+    </div>
+
+    <div id="winScreen" class="screen hidden">
+      <div class="panel">
+        <h1>LEVEL COMPLETE!</h1>
+        <button id="btnNextLevel">Next Level</button>
+        <button id="btnWinMenu">Level Select</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

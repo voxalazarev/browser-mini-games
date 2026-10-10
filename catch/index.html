@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Arrow Catch</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="game" width="960" height="540"></canvas>
+
+    <div id="menu" class="screen">
+      <div class="panel">
+        <h1>ARROW CATCH</h1>
+        <p id="sub"></p>
+        <div id="levelGrid"></div>
+        <div class="controls">
+          <div><b class="p1">Player 1</b> &nbsp; buckets show <b>&uarr; &larr; &darr; &rarr;</b> = keys <b>W A S D</b></div>
+          <div><b class="p2">Player 2</b> &nbsp; buckets show <b>&uarr; &larr; &darr; &rarr;</b> = the arrow keys</div>
+          <div class="small">Arrows fall from the sky. When an arrow is inside a bucket, press that bucket's key before it falls out. You only get ONE life each - one miss and the level is over. Esc = menu.</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="result" class="screen hidden">
+      <div class="panel small-panel">
+        <h1 id="resTitle"></h1>
+        <p id="resBody"></p>
+        <button id="nextBtn">Next Level</button>
+        <button id="retryBtn">Retry</button>
+        <button id="menuBtn">Menu</button>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

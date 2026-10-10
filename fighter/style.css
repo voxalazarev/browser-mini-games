@@ -1,0 +1,65 @@
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  background: #0b0b12;
+  color: #eee;
+  font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+}
+#app {
+  position: relative;
+  width: 960px;
+  height: 540px;
+  margin: 20px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 0 2px #333, 0 10px 40px rgba(0,0,0,0.6);
+}
+canvas { display: block; background: #14141f; }
+.screen {
+  position: absolute;
+  inset: 0;
+  background: rgba(5,5,10,0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.screen.hidden { display: none; }
+.panel {
+  background: #1a1a28;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 20px 28px;
+  width: 700px;
+  text-align: center;
+}
+.panel h1 { margin: 0 0 6px; letter-spacing: 3px; }
+#sub { margin: 0 0 12px; opacity: 0.8; font-size: 14px; }
+#mapPick { display: flex; align-items: center; justify-content: center; gap: 6px; }
+#mapNum {
+  width: 80px;
+  padding: 8px;
+  font-size: 15px;
+  text-align: center;
+  background: #2a2a40;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 6px;
+}
+#mapOf { opacity: 0.7; font-size: 14px; min-width: 60px; text-align: left; }
+#mapName { margin: 8px 0 6px; font-size: 16px; font-weight: bold; }
+#preview { border: 2px solid #444; border-radius: 6px; margin-bottom: 10px; }
+button {
+  background: #4a6cf7;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 4px;
+}
+button:hover { filter: brightness(1.15); }
+.controls { margin-top: 12px; font-size: 13px; line-height: 1.7; }
+.controls .small { opacity: 0.6; font-size: 12px; margin-top: 4px; }
+.p1 { color: #4ad0ff; }
+.p2 { color: #ff5b7a; }
